@@ -15,9 +15,9 @@ DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://evalkit:evalkit@loca
 async def main():
     conn = await asyncpg.connect(DATABASE_URL)
 
-    existing = await conn.fetchval("SELECT COUNT(*) FROM test_suites")
+    existing = await conn.fetchval("SELECT COUNT(*) FROM runs")
     if existing > 0:
-        print(f"Seed data already present ({existing} suites). Skipping.")
+        print(f"Seed data already present ({existing} runs). Skipping.")
         await conn.close()
         return
 
