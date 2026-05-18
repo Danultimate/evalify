@@ -99,7 +99,9 @@ async def _call_model(
         )
 
     elif config["provider"] == "google":
+        import os
         import google.generativeai as genai
+        genai.configure(api_key=os.environ["GEMINI_API_KEY"])
         model_instance = genai.GenerativeModel(
             model,
             system_instruction=system,
