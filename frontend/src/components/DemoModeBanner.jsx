@@ -9,8 +9,8 @@ export default function DemoModeBanner() {
       <span className="text-warn font-mono text-xs">● DEMO MODE</span>
       <span className="text-text-muted text-xs font-mono">
         — pre-seeded data · live runs disabled · contact{' '}
-        <a href="mailto:daniel.blanco@douglassdigital.com" className="text-info hover:underline">
-          daniel.blanco@douglassdigital.com
+        <a href="mailto:hello@danblanco.dev" className="text-info hover:underline">
+          hello@danblanco.dev
         </a>{' '}
         for a walkthrough
       </span>
